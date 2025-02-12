@@ -18,10 +18,10 @@ let editModeOnOrOff = false;
 async function init() {
     await includeHTML();
     await loadData();
-    if (window.location.pathname === '/html/board.html' || window.location.pathname === '/html/addTask.html') {
+    if (window.location.pathname.includes('/board.html') || window.location.pathname.includes('/addTask.html')) {
         loadAddTask();
     }
-    if (window.location.pathname === '/html/board.html') {
+    if (window.location.pathname.includes('/board.html')) {
         loadBoard();
     }
 }
